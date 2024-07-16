@@ -23,7 +23,7 @@
     <div class="container">
       <form class="needs-validation" action="" method="" novalidate name="form1" id="envioForm">
         <div class="row justify-content-center">
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <div class="row">
               <div class="col-md-12">
                 <div class="text-center mb-20">
@@ -179,8 +179,8 @@
                         <div class="campInt">
                           <div class="input-group mb-3">
                             <span class="input-group-text">$</span>
-                            <!-- <input type="text" class="form-control"  id="montoFinalDos" oninput="montoElejido()" required> -->
-                            <span class="form-control noInput" id="montoFinalDos" disabled></span>
+                            <input type="text" class="form-control"  id="montoFinalDos" oninput="montoElejido()" required>
+                            <!-- <span class="form-control noInput" id="montoFinalDos" disabled></span> -->
                           </div>
                         </div>
                       </td>
@@ -577,7 +577,7 @@ function firma(){
         //
         var quieroAhorrarS = document.getElementById('montoFinal').value;
         var quieroAhorrarUno = document.getElementById('montoFinalUno').value;
-        var calculoDeja = (quieroAhorrarS - quieroAhorrarUno);
+        // var calculoDeja = (quieroAhorrarS - quieroAhorrarUno);
 
         // Construir el objeto de datos
         var data = {
@@ -601,7 +601,7 @@ function firma(){
             // Datos de la tabla
             "montoFinal": montoEligeAqui,
             "montoFinalUno": montoEligeAquiUno,
-            "montoFinalDos": calculoDeja,
+            "montoFinalDos": montoEligeAquiDos,
             // REFERIDOS Y CÓDIGO
             "Referido": referido,
             "Codigo": codigo,
@@ -671,8 +671,8 @@ function firma(){
           // , mode: 'no-cors'
         })
             .then(response => {
-          // alert('¡Registro cargado exitosamente!');
-          window.location.replace("gracias.html");
+          alert('¡Registro cargado exitosamente!');
+          // window.location.replace("gracias.html");
         })
             .catch(error => {
               alert('Lo sentimos, su solicitud no ha podido ser enviada, por favor inténtelo más tarde.');

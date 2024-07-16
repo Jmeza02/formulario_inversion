@@ -281,13 +281,13 @@
     document.querySelector("#montoFinalDos").innerHTML = (calculoDeja);
 
 
-    // let sumaAhorroSemanal = (parseInt(quieroAhorrarUno)) + (parseInt(quieroAhorrarDos));
+    let sumaAhorroSemanal = (parseInt(quieroAhorrarUno)) + (parseInt(quieroAhorrarDos));
 
-    // if(sumaAhorroSemanal == ahorroSemanal ){
-    //   document.querySelector(".montoErr8").innerHTML = "";
-    // }else{
-    //   document.querySelector(".montoErr8").innerHTML = "La suma de tus ahorror semanales debe coincidir con el monto de" + " " + (ahorroSemanal);
-    // }
+    if(sumaAhorroSemanal == ahorroSemanal ){
+      document.querySelector(".montoErr8").innerHTML = "";
+    }else{
+      document.querySelector(".montoErr8").innerHTML = "La suma de tus ahorror semanales debe coincidir con el monto de" + " " + (ahorroSemanal);
+    }
   }
 
 
