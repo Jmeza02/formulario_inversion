@@ -19,3 +19,10 @@
 		line-height: 30px;
 	}
 }
+
+@media (max-width: 600px) {
+	.pld > .col-md-12 > .form-floating >.form-control, .pld > .form-floating >.form-select {
+		height: calc(5.5rem + 2px);
+		line-height: 1.25;
+	}
+}

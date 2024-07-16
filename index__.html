@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Ahorro Voluntario | Sindicato de maquila Tetekawi</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="libs/inher/css/style.css">
+  <link rel="stylesheet" href="libs/inher/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bgPrincipal">
+  <div class="steps  clearfix" style="display: none;">
+    <ul class="tablist multisteps-form__progress">
+      <li class="multisteps-form__progress-btn"></li>
+      <li class="multisteps-form__progress-btn"></li>
+      <li class="multisteps-form__progress-btn js-active current"></li>
+    </ul>
+  </div>
+  <section class="pt-100 pb-100">
+    <div class="container">
+      <form class="needs-validation multisteps-form__form" action="" method="" novalidate name="form1" id="wizard" onsubmit="return validar();">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 multisteps-form__panel  js-active">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="text-center mb-20">
+                  <h2 class="titleP">Bienvenido Ahorro voluntario</h2>
+                  <h4 class="descripcion">Sindicato Maquilas Tetakawi</h4>
+                </div>
+                <div class="box-form">
+                  <div class="col-md-12 mb-20">
+                    <div class="form-floating mb-3 borGreen">
+                      <input type="text" class="form-control" name="id_number" id="empresa" value="Tetakawi" disabled >
+                      <label class="form-label">Empresa</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                    <div class="form-floating mb-3 borGreen">
+                      <input type="text" class="form-control required" name="id_number" id="no-empleado" placeholder="No.de empleado*">
+                      <label  id="labels">No. de empleado*</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                    <div class="form-floating mb-3 borGreen">
+                      <input type="text" class="form-control required" name="name" id="" placeholder="Nombre*">
+                      <label class="form-label">Nombre*</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                    <div class="form-floating mb-3 borGreen">
+                      <input type="text" class="form-control required" name="last-name" placeholder="Apellido Paterno*">
+                      <label class="form-label">Apellido Paterno*</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                    <div class="form-floating mb-3 borGreen">
+                      <input type="text" class="form-control required" name="second_name" placeholder="Apellido Materno*">
+                      <label class="form-label">Apellido Materno</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                    <div class="form-floating mb-3 borGreen">
+                      <input class="form-control required" minlength="10" maxlength="10" onkeypress="return valideKey(event);" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');" name="phone" size="20" type="tel" placeholder="Teléfono celular*">
+                      <label class="form-label">Teléfono celular*</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                    <div class="form-floating mb-3 borGreen">
+                      <input type="email" class="form-control required mb-10" name="email" placeholder="Correo">
+                      <label  class="form-label">Correo</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                    <div class="form-check mb-10">
+                      <input type="radio" class="form-check-input gender-check" name="activation-plan" value="activation-plan" checked>
+                      <label class="form-check-label">Favor de activar mi plan de protección e iniciar mi ahorro semanal por $100 pesos</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                    <hr class="red">
+                  </div>
+                  <div class="text-ahorro mb-20">
+                    <p class="mb-10 puedes">Mira lo que vas a lograr….</p>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                    <table class="table table-striped centerTble">
+                      <tr class="cabTh">
+                        <th>Ahorrar cada semana</th>
+                        <th>En Dic 2024*</th>
+                        <th>En Dic 2025 si no lo sacas**</th>
+                        <th>En 5 años!! Dic 2029(3)</th>
+                      </tr>
+                      <tr>
+                        <td>150</td>
+                        <td>5,390</td>
+                        <td>13,600</td>
+                        <td>47,232</td>
+                      </tr>
+                      <tr>
+                        <td>200</td>
+                        <td>7,200</td>
+                        <td>18,300</td>
+                        <td>63,459</td>
+                      </tr>
+                      <tr>
+                        <td>250</td>
+                        <td>8,990</td>
+                        <td>22,900</td>
+                        <td>79,666</td>
+                      </tr>
+                      <tr>
+                        <td>300</td>
+                        <td>10,790</td>
+                        <td>27,600</td>
+                        <td>95,879</td>
+                      </tr>
+                      <tr>
+                        <td>500</td>
+                        <td>18,020</td>
+                        <td>46,200</td>
+                        <td>160,811</td>
+                      </tr>
+                    </table>
+                    <div class="notasInfo">
+                      <small>*Ahorro semanal Mayo a Dic '24</small>
+                      <small>**Ahorro acumulado a Dic '25, sin retirar. Tasa de interés 10.70% anual</small>
+                      <small>(3) Ahorro acumulado a una tasa especial del 12.00% anual Cuenta con programa de asistencia y protección</small>
+                    </div>
+                    <div class="col-md-12 mb-20">
+                      <hr class="green mt-30">
+                    </div>
+                    <div class="text-ahorro mb-20">
+                      <p class="mb-10 puedes">Ahora indica, cuánto vas a ahorrar a la semana y para cuándo lo quieres</p>
+                    </div>
+
+                    <table class="tableDos">
+                      <tr class="cabTh">
+                        <th>Quiero ahorrar</th>
+                        <th>Quiero ahorrar cada semana</th>
+                        <th>Dejarlo para el retiro</th>
+                      </tr>
+                      <tr class="cabTh">
+                        <td class=" pb-10">
+                          <div class="form-check mb-5">
+                            <input type="radio" class="form-check-input toolt activation-plan gender-check" id="plan100" name="activation-plan" value="100">
+                            <label>$100</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <p id="ws100">50</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <p id="ws100">50</p>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+
+                      <tr class="cabTh">
+                        <td class=" pb-10">
+                          <div class="form-check mb-5">
+                            <input type="radio" class="form-check-input activation-plan gender-check" id="plan150" name="activation-plan" value="150">
+                            <label>$150</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input class="form-control" type="number" id="ws150"  name="weekly-savings" onChange="restar150();">
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control"id="rs150" name="retirement-savings" disabled>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+
+
+                      <tr class="cabTh">
+                        <td class="pb-10">
+                          <div class="form-check mb-5">
+                            <input type="radio" class="form-check-input activation-plan gender-check" id="plan200" name="activation-plan" value="200">
+                            <label>$200</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" id="ws200" name="weekly-savings" onChange="restar200();">
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" id="rs200" name="retirement-savings" disabled>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="cabTh">
+                        <td class="pb-10">
+                          <div class="form-check mb-5">
+                            <input type="radio" class="form-check-input activation-plan gender-check" id="plan250" name="activation-plan" value="250">
+                            <label>$250</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" id="ws250" name="weekly-savings" onChange="restar250();">
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" id="rs250" name="retirement-savings" disabled>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="cabTh">
+                        <td class="pb-10">
+                          <div class="form-check mb-5">
+                            <input type="radio" class="form-check-input activation-plan gender-check" id="plan300" name="activation-plan" value="300">
+                            <label>$300</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" id="ws300" name="weekly-savings" onChange="restar300();">
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" id="rs300" name="retirement-savings" disabled>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="cabTh">
+                        <td class="pb-10">
+                          <div class="form-check mb-5">
+                            <input type="radio" class="form-check-input activation-plan gender-check" id="plan500" name="activation-plan" value="500">
+                            <label>$500</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" id="ws500" name="weekly-savings" onChange="restar500();">
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" id="rs500" name="retirement-savings" disabled>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                    <div class="notasInfo">
+                      <small>*Para disponer en la semana 47 -- Dic '24</small>
+                      <small>**Para dejarlo invertido a largo plazo... tasa interés 12.00% anual</small>
+                      <small>Cuenta con programa de asistencia y protección</small>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                    <hr class="red mt-30">
+                  </div>
+                  <div class="text-ahorro mb-20">
+                    <p class="mb-10 puedes">¿Otra cantidad? Indícala….</p>
+                  </div>
+                  <div class="text-check mb-10">
+                    <p>Puedes elegir retirarlo en Dic 2024 o dejarlo a largo plazo para tu retiro o una combinación de ambos</p>
+                    <p>Aquí un ejemplo:</p>
+                  </div>
+                  <table class="table table-striped centerTble">
+                    <tr class="cabTh">
+                      <th>Quiero ahorrar cada semana</th>
+                      <th>Quiero ahorrar cada semana*</th>
+                      <th>Dejarlo para el retiro**</th>
+                    </tr>
+                    <tr class="shadow">
+                      <td>$250</td>
+                      <td>$100</td>
+                      <td>$150</td>
+                    </tr>
+                  </table>
+                  <div class="text-check mb-10">
+                    <p>Elige aquí:</p>
+                  </div>
+                  <table class="tableDos">
+                    <tr class="cabTh">
+                      <th>Quiero ahorrar cada semana</th>
+                      <th>Quiero ahorrar cada semana*</th>
+                      <th>Dejarlo para el retiro**</th>
+                    </tr>
+                    <tr class="cabTh">
+                      <td>
+                        <div class="campInt">
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" id="wsOther01" name="weekly-savings">
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="campInt">
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" id="wsOther02" name="weekly-savings" onChange="restarOther();">
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="campInt">
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" id="rsOther03" name="retirement-savings" disabled>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="col-md-12 mb-20">
+                    <hr class="green mt-30">
+                  </div>
+                  <div class="col-md-12 mb-20 checkBB">
+                    <div class="form-check pl-0">
+                      <label>Semestral (semana 22)</label>
+                      <input type="radio" name="retirement" value="weekly-22" class="form-check-input">
+                    </div>
+                    <div class="form-check pl-0">
+                      <label>Anual (semana 47)</label>
+                      <input type="radio" name="retirement" value="weekly-47" class="form-check-input">
+                    </div>
+                    <div class="form-check pl-0">
+                      <label>Ambos (semana 22 y 47)</label>
+                      <input type="radio" name="retirement" value="weekly-22-47" class="form-check-input">
+                    </div>
+                  </div>
+                  <hr class="red">
+                  <div class="mb-20">
+                      <ul class="listContrato">
+                        <li><a href="https://came.org.mx/cof_kja_mas.html" target="_blank">COF Kja+</a></li>
+                        <li><a href="https://came.org.mx/contrato_kja_mas.html" target="_blank">Contrato Kja+</a></li>
+                      </ul>
+                      <div class="form-check mb-5">
+                        <input type="radio" class="form-check-input" name="aceptaLegales" id="aceptaLegales" value="aceptaLegales" checked>
+                        <label class="form-check-label smallchechk" >Al firmar el cliente acepta que CAME (Consejo de Asistencia al Microemprendedor S.A de C.V.S.F.P) hizo de su conocimiento los términos y condiciones que se enlistan, los que suscriben de conformidad para todos los efectos legales, acepto la firma.</label>
+                      </div>
+                      <br>
+                      <p class="text-center textUlt">En breve vas a recibir los detalles de tu programa de protección y asistencias.</p>
+                  </div>
+                  <div class="col-md-12">
+                    <input class="btn btn-main w-100 js-btn-next" type="submit" id="wizard" value="Enviar">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- step 3 -->
+        <div class="multisteps-form__panel" data-animation="fadeIn">
+          <div class="wizard-forms">
+            <section class="pt-200 pb-200 bg-thank">
+              <div class="container">
+                <form class="needs-validation" action="gracias.html" method="" novalidate id="formulario">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="text-center mb-20">
+                            <!-- <img src="libs/inher/img/came-impulsado-por-techreo.png" class="img-fluid d-block m-auto w-30 mb-20"> -->
+                            <h4 class="titulo mb-15"><b>¡Bravo!</b></h4>
+                            <br>
+                            <h4 class="titulo mb-50">Ahora ya tienes tu cuenta de ahorro individual Kja+</h4>
+                            <br>
+                            <!-- <img src="libs/inher/img/logo-tetakawi.png" class="img-fluid d-block m-auto w-25 mb-20"> -->
+                            <h4 class="descripcion mb-50">Pronto recibirás los detalles de tu programa de seguros y asistencias.</h4>
+                            <h4 class="descripcion mb-50">En los siguientes días, enviaremos a tu celular un link para completar el proceso.</h4>
+                            <br>
+                            <hr class="red">
+                            <br>
+                            <p><i>¿Tienes dudas? Llama en este momento 800.667.9900 ext 4</i></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- JS -->
+  
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/conexion_service.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="assets/js/form-step.js"></script>
+  <script src="assets/js/jquery.validate.min.js"></script>
+  <script src="assets/js/validate.js"></script>
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/weekly-savings.js"></script>
+  <script>
+    jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
+        phone_number = phone_number.replace(/\s+/g, ""); 
+          return this.optional(element) || phone_number.length > 9 &&
+            phone_number.match(/^(1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
+    }, "Please enter a valid phone number");
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>

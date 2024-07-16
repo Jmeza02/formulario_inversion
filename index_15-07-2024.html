@@ -84,13 +84,13 @@
                   </div>
                   <div class="col-md-12 mb-20">
                     <div class="form-floating mb-3 borGreen">
-                      <input type="email" class="form-control mb-10" title="Por favor, ingrese un correo válido." autocomplete="off" name="correo" id="correo" placeholder="Correo" required>
-                      <label for="correo" class="form-label">Correo*</label>
+                      <input type="email" class="form-control mb-10" title="Por favor, ingrese un correo válido." autocomplete="off" name="correo" id="correo" placeholder="Correo">
+                      <label for="correo" class="form-label">Correo</label>
                     </div>
                   </div>
                   <div class="col-md-12 mb-20">
                     <div class="form-check mb-10">
-                      <input type="checkbox" class="form-check-input" name="plan_gratuito" id="plan_gratuito" value="Favor de activar mi plan de protección gratuito e iniciar mi ahorro semanal por $100 pesos" checked="checked" onclick ="this.checked = !this.checked">
+                      <input type="checkbox" class="form-check-input" name="plan_gratuito" id="plan_gratuito" value="Favor de activar mi plan de protección gratuito e iniciar mi ahorro semanal por $100 pesos" checked>
                       <label class="form-check-label" for="plan_gratuito">Favor de activar mi plan de protección e iniciar mi ahorro semanal por $100 pesos</label>
                     </div>
                     <!-- <p class="nota mb-0"><i>*Por 5 meses.</i></p> -->
@@ -148,9 +148,253 @@
                     <div class="col-md-12 mb-20">
                       <hr class="green mt-30">
                     </div>
+                    <div class="text-ahorro mb-20">
+                      <p class="mb-10 puedes">Ahora indica, cuánto vas a ahorrar a la semana y para cuándo lo quieres</p>
+                    </div>
+
+                    <table class="tableDos">
+                      <tr class="cabTh">
+                        <th>Quiero ahorrar</th>
+                        <th>Quiero ahorrar cada semana</th>
+                        <th>Dejarlo para el retiro</th>
+                      </tr>
+                      <tr class="cabTh">
+                        <td class=" pb-10">
+                          <div class="form-check mb-5">
+                            <input type="checkbox" class="form-check-input toolt" name="cien" value="100" id="cien"
+                            onclick="seleccionado(1)">
+                            <label>$100</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control cienPrimero" name="cienUno" id="cienUno" oninput="calcular()" disabled>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control cienPrimero" name="cienDos"  id="cienDos" oninput="calcular()" disabled>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="2">
+                          <span class="montoErr"></span>
+                        </td>
+                      </tr>
+
+
+                      <tr class="cabTh">
+                        <td class=" pb-10">
+                          <div class="form-check mb-5">
+                            <input type="checkbox" class="form-check-input" name="cienCinco" value="$150" id="cienCinco" onclick="seleccionado(2)">
+                            <label>$150</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" name="cienCincoUno"  id="cienCincoUno" oninput="calcular()" disabled>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" name="cienCincoDos"  id="cienCincoDos" oninput="calcular()" disabled>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="2">
+                          <span class="montoErr2"></span>
+                        </td>
+                      </tr>
+
+
+
+                      <tr class="cabTh">
+                        <td class="pb-10">
+                          <div class="form-check mb-5">
+                            <input type="checkbox" class="form-check-input" name="dosCien" value="$200" id="dosCien" onclick="seleccionado(3)">
+                            <label>$200</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" name="dosCienUno"  id="dosCienUno" oninput="calcular()" disabled>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" name="dosCienDo"  id="dosCienDos" oninput="calcular()" disabled>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="2">
+                          <span class="montoErr3"></span>
+                        </td>
+                      </tr>
+
+                      <tr class="cabTh">
+                        <td class="pb-10">
+                          <div class="form-check mb-5">
+                            <input type="checkbox" class="form-check-input" name="AhorroSemanal250" id="AhorroSemanal250" onclick="seleccionado(4)">
+                            <label>$250</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" name="AhorroSemanal250Uno"  id="AhorroSemanal250Uno" oninput="calcular()">
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" name="AhorroSemanal250Dos"  id="AhorroSemanal250Dos" oninput="calcular()">
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="2">
+                          <span class="montoErr4"></span>
+                        </td>
+                      </tr>
+
+                      <tr class="cabTh">
+                        <td class="pb-10">
+                          <div class="form-check mb-5">
+                            <input type="checkbox" class="form-check-input" name="tresCien" value="$300" id="tresCien" onclick="seleccionado(5)">
+                            <label>$300</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" name="tresCieUno"  id="tresCieUno" oninput="calcular()" disabled>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" name="tresCieDos"  id="tresCieDos" oninput="calcular()" disabled>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="2">
+                          <span class="montoErr5"></span>
+                        </td>
+                      </tr>
+
+                      <tr class="cabTh">
+                        <td class="pb-10">
+                          <div class="form-check mb-5">
+                            <input type="checkbox" class="form-check-input" name="cincoCien" value="$500" id="cincoCien" onclick="seleccionado(6)">
+                            <label>$500</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" name="cincoCienUno"  id="cincoCienUno" oninput="calcular()" disabled>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="campInt">
+                            <div class="input-group">
+                              <span class="input-group-text">$</span>
+                              <input type="number" class="form-control" name="cincoCienDos"  id="cincoCienDos" oninput="calcular()" disabled>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="2">
+                          <span class="montoErr6"></span>
+                        </td>
+                      </tr>
+
+                      <!-- <tr>
+                        <td colspan="3">
+                          <div class="form-floating mb-3 borGreen montoP">
+                            <span class="signo">$</span>
+                            <input class="form-control monTos" placeholder="Desde $50" id="Monto" name="Monto" type="number" autocomplete="off" title="Coloca tu monto." >
+                            <label for="correo" class="form-label">Coloca tu monto.</label>
+                            <span id="error-monto" style="display: none;"></span>
+                          </div>
+                        </td>
+                      </tr> -->
+                      <tr>
+                        <td></td>
+                        <td colspan="2">
+                          <span class="montoErr7"></span>
+                        </td>
+                      </tr>
+                    </table>
+                    <div class="notasInfo">
+                      <small>*Para disponer en la semana 47 -- Dic '24</small>
+                      <small>**Para dejarlo invertido a largo plazo... tasa interés 12.00% anual</small>
+                      <small>Cuenta con programa de asistencia y protección</small>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                    <hr class="red mt-30">
+                  </div>
+                  <div class="text-ahorro mb-20">
+                    <p class="mb-10 puedes">¿Otra cantidad? Indícala….</p>
                   </div>
                   <div class="text-check mb-10">
-                    <p>Ahora indica, cuanto vas a ahorrar a la semana y para cuando lo quieres, puedes elegir retirarlo en Dic 2024 o dejarlo a largo plazo para tu retiro o una combinación de ambos </p>
+                    <p>Puedes elegir retirarlo en Dic 2024 o dejarlo a largo plazo para tu retiro o una combinación de ambos</p>
+                    <p>Aquí un ejemplo:</p>
+                  </div>
+                  <table class="table table-striped centerTble">
+                    <tr class="cabTh">
+                      <th>Quiero ahorrar cada semana</th>
+                      <th>Quiero ahorrar cada semana</th>
+                      <th>Dejarlo para el retiro</th>
+                    </tr>
+                    <tr class="shadow">
+                      <td>$250</td>
+                      <td>$100</td>
+                      <td>$150</td>
+                    </tr>
+                  </table>
+                  <div class="text-check mb-10">
+                    <p>Elige aquí:</p>
                   </div>
                   <table class="tableDos">
                     <tr class="cabTh">
@@ -163,7 +407,7 @@
                         <div class="campInt">
                           <div class="input-group mb-3">
                             <span class="input-group-text">$</span>
-                            <input type="text" class="form-control"  id="montoFinal" oninput="montoElejido()" required>
+                            <input type="text" class="form-control"  id="montoFinal" oninput="montoElejido()">
                           </div>
                         </div>
                       </td>
@@ -171,7 +415,7 @@
                         <div class="campInt">
                           <div class="input-group mb-3">
                             <span class="input-group-text">$</span>
-                            <input type="text" class="form-control"  id="montoFinalUno" oninput="montoElejido()" required>
+                            <input type="text" class="form-control"  id="montoFinalUno" oninput="montoElejido()">
                           </div>
                         </div>
                       </td>
@@ -179,8 +423,7 @@
                         <div class="campInt">
                           <div class="input-group mb-3">
                             <span class="input-group-text">$</span>
-                            <!-- <input type="text" class="form-control"  id="montoFinalDos" oninput="montoElejido()" required> -->
-                            <span class="form-control noInput" id="montoFinalDos" disabled></span>
+                            <input type="text" class="form-control"  id="montoFinalDos" oninput="montoElejido()">
                           </div>
                         </div>
                       </td>
@@ -211,127 +454,6 @@
                       <span id="checkError"></span>
                     </div>
                   </div>
-                  <div class="col-md-12 mb-20">
-                    <hr class="red mt-30">
-                  </div>
-                  <div class="promos">
-                    <div class="col-md-12 mb-20">
-                      <div class="form-floating mb-3 borGreen">
-                        <input type="text" class="form-control mb-10 alfaNumber" title="Referido por (nombre completo delegado)" autocomplete="off" name="referido" id="referido" placeholder="Referido por (nombre completo delegado)" maxlength="50">
-                        <label for="referido" class="form-label">Referido por (Nombre completo delegado)</label>
-                      </div>
-                    </div>
-                    <div class="col-md-12 mb-20">
-                      <div class="form-floating mb-3 borGreen">
-                        <input type="text" class="form-control mb-10 alfaNumber" title="Código de promoción" autocomplete="off" name="codigoPromo" id="codigoPromo" placeholder="Código de promoción" maxlength="15">
-                        <label for="codigoPromo" class="form-label">Código de promoción</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="pld checkBB">
-                    <div class="form-check pl-0">
-                      <label for="pld1">Actuó por cuenta propia y no de un tercero; el dinero que reciba, disponga y genere esta cuenta es mío; proviene y será usado en fuentes legales</label>
-                      <input 
-                      type="checkbox" 
-                      name="pld1" 
-                      id="pld1" 
-                      value="OK" 
-                      class="form-check-input"
-                      checked="checked" onclick ="this.checked = !this.checked">
-                    </div>
-
-                    <div class="form-check pl-0">
-                      <label for="pld2">En los últimos meses, no he ocupado o algún familiar directo algún cargo público nacional o extranjero.</label>
-                      <input 
-                      type="checkbox" 
-                      name="pld2" 
-                      id="pld2" 
-                      value="OK" 
-                      class="form-check-input"
-                      checked="checked" onclick ="this.checked = !this.checked">
-                    </div>
-
-                    <div class="form-check pl-0">
-                      <label for="pld4">Autorizo la verificación de todos mis datos registrados; confirmo que mis ingresos mensuales provienen exclusivamente del desempeño de mi ocupación, profesión o actividad manifiesta.</label>
-                      <input 
-                      type="checkbox" 
-                      name="pld3" 
-                      id="pld3" 
-                      value="OK" 
-                      class="form-check-input"
-                      checked="checked" onclick ="this.checked = !this.checked">
-                    </div>
-
-                    <div class="col-md-12 mb-20">
-                      <div class="form-floating mb-3 borGreen">
-                        <input type="text"
-                        class="form-control mb-10"
-                        title="Tipo de actividad."
-                        autocomplete="off"
-                        name="pld4"
-                        id="pld4"
-                        placeholder="Tipo de actividad."
-                        value="Servicio"
-                        disabled>
-                        <label for="pld4" class="form-label">Tipo de actividad.</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-12 mb-20">
-                      <div class="form-floating mb-3 borGreen">
-                        <input type="text"
-                        class="form-control mb-10"
-                        title="¿Cuál es tu actividad económica?"
-                        autocomplete="off"
-                        name="pld5"
-                        id="pld5"
-                        placeholder="¿Cuál es tu actividad económica?"
-                        value="Empleado privado"
-                        disabled>
-                        <label for="pld5" class="form-label">¿Cuál es tu actividad económica?</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-12 mb-20">
-                      <div class="pldflex">
-                        <span class="input-group-text">$</span>
-                        <div class="form-floating mb-3 borGreen">
-                          <input type="text"
-                          class="form-control mb-10"
-                          title="Mensualmente, ¿Cuántos depósitos consideras realizar en esta cuenta?"
-                          autocomplete="off"
-                          name="pld6"
-                          id="pld6"
-                          placeholder="Mensualmente, ¿Cuántos depósitos consideras realizar en esta cuenta?"
-                          required
-                          >
-                          <label for="pld6" class="form-label">Mensualmente, ¿Cuántos depósitos consideras realizar en esta cuenta?</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12 mb-20">
-                      <div class="pldflex">
-                        <span class="input-group-text">$</span>
-                        <div class="form-floating mb-3 borGreen">
-                          <input type="text"
-                          class="form-control mb-10"
-                          title="Mensualmente, ¿Cuánto dinero consideras depositar en esta cuenta?"
-                          autocomplete="off"
-                          name="pld7"
-                          id="pld7"
-                          placeholder="Mensualmente, ¿Cuánto dinero consideras depositar en esta cuenta?"
-                          required
-                          >
-                          <label for="pld7" class="form-label">Mensualmente, ¿Cuánto dinero consideras depositar en esta cuenta?</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-
-
                   <hr class="red">
                   <div class="mb-20">
                       <ul class="listContrato">
@@ -339,7 +461,7 @@
                         <li><a href="https://came.org.mx/contrato_kja_mas.html" target="_blank">Contrato Kja+</a></li>
                       </ul>
                       <div class="form-check mb-5">
-                        <input type="checkbox" class="form-check-input" name="aceptaLegales" id="aceptaLegales" value="aceptaLegales" checked onclick ="this.checked = !this.checked">
+                        <input type="checkbox" class="form-check-input" name="aceptaLegales" id="aceptaLegales" value="aceptaLegales" onclick="firma()" checked>
                         <label class="form-check-label smallchechk" for="iniciar_100">Al firmar el cliente acepta que CAME (Consejo de Asistencia al Microemprendedor S.A de C.V.S.F.P) hizo de su conocimiento los términos y condiciones que se enlistan, los que suscriben de conformidad para todos los efectos legales, acepto la firma.</label>
                       </div>
                       <br>
@@ -431,13 +553,26 @@
       return false;
     }
   }
+
+  // Validación de otro monto menor a $101
+  // function validar() {
+  //   let monto;
+  //   monto = document.getElementById('Monto').value;
+  //   if (monto <= 501) {
+  //     document.getElementById("error-monto").innerHTML = "El monto debe ser a partir de $501";
+  //     document.getElementById("error-monto").style.display = '';
+  //   }
+  // }
+
   $(document).ready(function() {
 
     $("input[name='Monto']").focus(function() {
       $("input[name='AhorroSemanal']").prop('checked', false);
       $("input[name='plan_gratuito']").prop('checked', false);
       $("input[name='plan_proteccion']").prop('checked', true);
+      
     });
+
     $("input[name='Monto']").blur(function() {
       if ($(this).val() === "") {
         $("input[id='AhorroSemanal250']").prop('checked', true);
@@ -452,7 +587,13 @@
       }else{
         document.getElementById("error-monto").innerHTML = "";
       }
+
+      
     });
+    // $("input[name='AhorroSemanal']").change(function() {
+    //   $("input[name='AhorroSemanal']").not(this).prop('checked', false);
+    //   $("input[name='Monto']").prop('value', "");
+    // });
 
     $("input[name='AhorroSemanal']").change(function() {
       if (!$("input[name='AhorroSemanal']:checked").length && $("input[name='Monto']").val() == "") {
@@ -466,6 +607,21 @@
       $("input[name='Monto']").prop('required', false);
       $("input[name='Monto']").val("");
     });
+
+  // Validación de checkbox
+  // $("#AhorroSemanal250").change(function() {
+  //   if ($(this).is(":checked")) {
+  //     $("input[name='plan_proteccion']").prop('checked', true);
+  //     $("input[name='iniciar_100']").prop('checked', false);
+  //   } else {
+  //     $("input[type='checkbox']").not(this).prop('checked', false);
+  //     $("input[name='plan_proteccion']").prop('checked', false);
+  //     $("input[name='iniciar_100']").prop('checked', true);
+  //   }
+  // });
+  // $(document).click(function() {
+  //   var ahorroSemanal = $("input[name='AhorroSemanal']:checked").val();
+  // });
 
 // formulario Validación
 $("#envioForm").validate({
@@ -488,9 +644,75 @@ $("#envioForm").validate({
     }
   }
 });
+
 });
 
+
+  
+
+
+
+
 </script>
+
+<!-- Separar millares por comas -->
+<!-- <script>
+  function iniTodo(idForm, idCampo, dec, mil){
+    let obj = document.getElementsByName(idForm)[0];
+    obj.idCampo = idCampo;
+    obj.posDec = dec;
+    obj.miles = mil;
+    obj.onkeyup = procTecla;
+    obj.sepMil = ",";
+    obj.sepDec = ".";
+    obj.local = "en-US";
+  }
+  function procTecla(ev){
+    let Monto = this.idCampo
+    let cadena = this[Monto].value;
+    let punto = cadena.indexOf(this.sepDec);
+    let decimales = (punto>=0)?cadena.substr(punto):"";
+    let tecla = event.key;
+    let cars = /[\.0-9+\-]/;
+    let digs = /[\.0-9]/;
+    let minumero = 0;
+
+    if(cadena.length==0){
+      return
+    }
+    if(cadena.length==1){
+      if (cars.test(tecla)){
+        cadena = tecla; 
+        if (tecla == this.sepDec){
+          cadena = '0'+this.sepDec;
+        }
+      }
+    }
+    else{
+      if(digs.test(tecla)){
+        if (punto > 0){
+          if(cadena.split(this.sepDec).length == 2){
+            decimales = cadena.substr(punto);
+            if(decimales.length-1 > this.posDec){
+              decimales = decimales.slice(0,-1);
+              cadena = cadena.slice(0, -1 );
+            }
+          }
+        }
+      }
+      else{
+        if(tecla.length==1){
+          decimales = decimales.slice(0,-1);
+          cadena = cadena.slice(0,-1);
+        }
+      }
+      minumero = parseInt(cadena.replaceAll(this.sepMil,''));
+      cadena = minumero.toLocaleString(this.local);
+      cadena = decimales.length>0? cadena+decimales : cadena;
+    }
+    this[Monto].value = cadena
+  }
+</script> -->
 
 <!-- Integración API -->
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
@@ -500,6 +722,7 @@ $("#envioForm").validate({
     var checkbox2 = document.getElementById("semana_47");
     var checkbox3 = document.getElementById("semana_22y47");
     var btnEnviar = document.getElementById('enviar');
+
     if (checkbox1.checked == true && elemento !==2 && elemento !==3) {
         checkbox2.checked = false;
         checkbox3.checked = false;
@@ -521,6 +744,10 @@ $("#envioForm").validate({
     btnEnviar.disabled = false;
     }
 }
+
+
+
+
 
 function firma(){
   var firmaCheck = document.getElementById('aceptaLegales');
@@ -558,26 +785,38 @@ function firma(){
         var semana_22y47 = $("input[name='semana_22y47']:checked").val();
         var aceptaLegales = $("input[name='aceptaLegales']:checked").val();
         // ELEMENTOS DE LA TABLA
+        // valores de 100
+        var cien = $("input[name='cien']:checked").val();
+        var cienUno = document.getElementById("cienUno").value;
+        var cienDos = document.getElementById("cienDos").value;
+        // valores de 150
+        var cientocincuenta = $("input[name='cienCinco']:checked").value;
+        var cienCincuenta    = document.getElementById('cienCincoUno').value;
+        var cienCincuentaDos = document.getElementById('cienCincoDos').value;
+        // valores de 200
+        var dosCien = $("input[name='dosCien']:checked").value;
+        var dosCienUno = document.getElementById('dosCienUno').value;
+        var dosCienDos = document.getElementById('dosCienDos').value;
+        // valores de 250
+        var AhorroSemanal250 = $("input[name='AhorroSemanal250']:checked").value;
+        var AhorroSemanal250Uno = document.getElementById('AhorroSemanal250Uno').value;
+        var AhorroSemanal250Dos = document.getElementById('AhorroSemanal250Dos').value;
+        // valores de 300
+        var tresCien = $("input[name='tresCien']:checked").value;
+        var tresCieUno = document.getElementById('tresCieUno').value;
+        var tresCieDos = document.getElementById('tresCieDos').value;
+        // valores de 500
+        var cincoCien = $("input[name='cincoCien']:checked").value;
+        var cincoCienUno = document.getElementById('cincoCienUno').value;
+        var cincoCienDos = document.getElementById('cincoCienDos').value;
         // ELIGE AQUI
         var montoEligeAqui = document.getElementById('montoFinal').value;
         var montoEligeAquiUno = document.getElementById('montoFinalUno').value;
         var montoEligeAquiDos = document.getElementById('montoFinalDos').value;
-        // REFERIDOS Y CÓDIGO
-        var referido = document.getElementById('referido').value;
-        var codigo = document.getElementById('codigoPromo').value;
-        // PREGUNTAS PLD
-        var pldUno = $("input[name='pld1']:checked").val();
-        var pldDos = $("input[name='pld2']:checked").val();
-        var pldtres = $("input[name='pld3']:checked").val();
-        var tipoDeActividad = document.getElementById('pld4').value;
-        var actividadEconomica = document.getElementById('pld5').value;
-        var cuantosDepositos = document.getElementById('pld6').value;
-        var cuantoDinero = document.getElementById('pld7').value;
-        var ok = "OK";
-        //
-        var quieroAhorrarS = document.getElementById('montoFinal').value;
-        var quieroAhorrarUno = document.getElementById('montoFinalUno').value;
-        var calculoDeja = (quieroAhorrarS - quieroAhorrarUno);
+
+        
+
+        
 
         // Construir el objeto de datos
         var data = {
@@ -599,27 +838,33 @@ function firma(){
             "semana_22y47": semana_22y47,
             "aceptaLegales": aceptaLegales,
             // Datos de la tabla
+            "Monto100": cien,
+            "Monto100Uno":   cienUno,
+            "Monto100Dos":   cienDos,
+            // 150
+            "Monto150":  cientocincuenta,
+            "Monto150Uno": cienCincuenta,
+            "Monto150Dos": cienCincuentaDos,
+            // 200
+            "Monto200":  dosCien,
+            "Monto200Uno": dosCienUno,
+            "Monto200Dos": dosCienDos,
+            // 250
+            "Monto250": AhorroSemanal250,
+            "Monto250Uno": AhorroSemanal250Uno,
+            "Monto250Dos": AhorroSemanal250Dos,
+            // 300
+            "Monto300": tresCien,
+            "Monto300Uno": tresCieUno,
+            "Monto300Dos": tresCieDos,
+            // 500
+            "Monto500": cincoCien,
+            "Monto500Uno": cincoCienUno,
+            "Monto500Dos": cincoCienDos,
+            // Elige Aqui
             "montoFinal": montoEligeAqui,
             "montoFinalUno": montoEligeAquiUno,
-            "montoFinalDos": calculoDeja,
-            // REFERIDOS Y CÓDIGO
-            "Referido": referido,
-            "Codigo": codigo,
-            // PREGUNTAS PLD
-            "1.-Actuó por cuenta propia y no de un tercero; el dinero que reciba, disponga y genere esta cuenta es mío; proviene y será usado en fuentes legales.": pldUno,
-            " 2.-Declaro que el dinero que yo disponga y que genere esta cuenta proviene y será usado en fuentes legales": ok,
-            "3.-Solamente yo podré disponer del dinero y beneficios que generé este contrato": ok,
-            "4.-En los ultimos meses, no he ocupado o algún familiar directo algún cargo público nacional o extranjero": pldDos,
-            "5.-No soy familiar de alguien que ocupe o haya ocupado en los ultimos 12 meses algún cargo publico": ok,
-            "6.-No tengo residencia en el extranjero, no soy accionista de alguna empresa extrangera y no pago impuestos en algún país": ok,
-            "7.-Autorizo la verificación de todos mis datos registrados; confirmo que mis ingresos mensuales provienen exclusivamente del desempeño de mi ocupación, profesión o actividad manifiesta.": pldtres,
-            "8.-Tipo de Actividad": tipoDeActividad,
-            "9.-¿Cuál es tu actividad económica?": actividadEconomica,
-            "10.-Confirmo que mis ingresos mensuales provienen exclusivamente del desempeño de mi ocupación, profesión o actividad manifiesta.": ok,
-            "11.-Mensualmente, ¿Cuántos depósitos consideras realizar en esta cuenta?": cuantosDepositos,
-            "12.-¿Cuál es su ocupación?": ok,
-            "13.-Mensualmente, ¿Cuánto dinero consideras depositar en esta cuenta?": cuantoDinero,
-            "14.-¿Cuál es su Actividad Económica Alterna?" : ok,
+            "montoFinalDos": montoEligeAquiDos,
           })
         };
 
@@ -700,36 +945,5 @@ function firma(){
 
 </script> -->
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-<script>
-  function updateTextView(_obj){
-  var num = getNumber(_obj.val());
-  if(num==0){
-    _obj.val('');
-  }else{
-    _obj.val(num.toLocaleString());
-  }
-}
-function getNumber(_str){
-  var arr = _str.split('');
-  var out = new Array();
-  for(var cnt=0;cnt<arr.length;cnt++){
-    if(isNaN(arr[cnt])==false){
-      out.push(arr[cnt]);
-    }
-  }
-  return Number(out.join(''));
-}
-$(document).ready(function(){
-  $('#pld6').on('keyup',function(){
-    updateTextView($(this));
-  });
-});
-$(document).ready(function(){
-  $('#pld7').on('keyup',function(){
-    updateTextView($(this));
-  });
-});
-</script>
 </body>
 </html>

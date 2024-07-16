@@ -760,6 +760,9 @@
 .pb-200 {
     padding-bottom: 200px !important;
 }
+.pl-0 {
+    padding-left: 0px !important;
+}
 .pl-5 {
     padding-left: 5px !important;
 }
@@ -1063,10 +1066,9 @@ body {
 }
 
 .form-control {
-    border: 1px solid #707070;
-    border-radius: 6px !important;
-    margin-bottom: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* border-radius: 6px !important; */
+    /* margin-bottom: 10px; */
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
 }
 
 .form-select {
@@ -1087,11 +1089,11 @@ body {
 }
 
 .input-group-text {
-    color: #fff;
+    color: #000000;
     border: none;
-    border-radius: 6px 0 0 6px;
-    background-color: #FF0000;
-    /*border: 1px solid #949494;*/
+    border-radius: 0px;
+    background-color: #f2f2f2;
+    /* border: 1px solid #949494; */
 }
 
 .form-control.is-invalid, .was-validated .form-control:invalid {
@@ -1195,13 +1197,14 @@ div:where(.swal2-container) div:where(.swal2-popup) {
 }
 
 .box-form {
-    border: 10px solid #CDD4D9;
+    border: 10px solid rgba(205, 212, 217, 0.767);
     border-radius: 20px;
     padding: 10px;
+    background: rgba(255, 255, 255, 1);
 }
 
 .titulo {
-    color: #1B1B1B;
+    color: #522D6D;
     font-size: 26px;
 }
 
@@ -1209,6 +1212,7 @@ div:where(.swal2-container) div:where(.swal2-popup) {
     color: #5C5C5C;
     font-size: 20px;
     font-weight: 400;
+    margin-bottom: 30px;
 }
 
 .divider-line {
@@ -1225,6 +1229,14 @@ div:where(.swal2-container) div:where(.swal2-popup) {
     margin-top: 0 !important;
 }
 
+.text-ahorro  > .puedes {
+    color: #522D6D;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+}
+
 .text-ahorro p {
     color: #5C5C5C;
     font-size: 22px;
@@ -1235,6 +1247,11 @@ div:where(.swal2-container) div:where(.swal2-popup) {
 
 .text-ahorroRegular {
     font-weight: 400 !important;
+}
+
+.text-ahorroRegular > span{
+    font-size: 26px;
+    font-weight: 600;
 }
 
 .form-control:disabled {
@@ -1267,7 +1284,7 @@ div:where(.swal2-container) div:where(.swal2-popup) {
 .text-check p {
     font-size: 22px;
     line-height: 28px;
-    text-align: center;
+    text-align: left;
 }
 
 .nota {
@@ -1318,4 +1335,342 @@ tr {
     margin-top: 10px;
     display: block;
     font-size: 14px;
+}
+
+
+.bgPrincipal{
+    background: url(../img/bg.png);
+    background-size: cover;
+}
+
+.titleP{
+    font-size: 36px;
+    color: #522D6D;
+    font-weight: bold;
+}
+
+.listaPrecios{
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+}
+
+.listaPrecios li{
+    width: 33.33%;
+    background: #FDFAFF;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    padding: 30px 30px;
+    border-radius: 150px;
+    text-align: center;
+    margin: 30px 10px;
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.listaPrecios li > p{
+    margin-bottom: 0px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #522D6D;
+    display: flex;
+}
+
+.listaPrecios li > span{
+    color: #522D6D;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.titleBox{
+    font-size: 16px;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.titleBox p > b{
+    color: #522D6D;
+    text-transform: uppercase;
+}
+
+.red{
+    border: solid 4px #FF0000;
+    border-radius: 100px;
+    opacity: 1;
+    width: 50%;
+    margin: 30px auto;
+}
+
+.green{
+    border: solid 4px #B8BE14;
+    border-radius: 100px;
+    opacity: 1;
+    width: 50%;
+    margin: 30px auto;
+}
+
+.borGreen > input{
+    border-bottom: solid 1px #3BBFAD !important;
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    border-radius: 0px !important;
+    
+}
+
+.form-floating>.form-control:focus, .form-floating>.form-control:not(:placeholder-shown) {
+    padding-top: 40px;
+}
+
+
+.cabTh > th{
+    background: #E9DDF7 ;
+    font-size: 12px;
+    text-align: center;
+    width: 25%;
+    vertical-align: middle;
+    padding: 10px 1px;
+}
+
+
+.cabTh > th:last-child{
+    border-radius: 0px 20px 0px 0px;
+}
+
+.cabTh > th:nth-child(1){
+    border-radius: 20px 0px 0px 0px;
+}
+
+/* .cabTh > th:nth-child(1){
+    background: #fff !important;
+} */
+
+.montoP{
+    position: relative;
+}
+
+.borGreen > .signo{
+    position: relative;
+    bottom: -52px;
+
+}
+
+.form-check label{
+    font-size: 16px;
+}
+
+
+
+.checkBB > .form-check .form-check-input {
+    float: right !important;
+}
+
+.textUlt{
+    font-size: 18px
+}
+
+.listContrato{
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+
+}
+
+.listContrato li{
+    color: #1B1B1B;
+    margin: 10px 0px;
+}
+
+.listContrato li > a{
+    color: #d10000;
+    font-size: 18px;
+}
+
+.smallchechk{
+    font-size: 10px !important;
+    margin-top: 0px !important;
+}
+
+.bg-thank{
+    backdrop-filter: blur(10px);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.error {
+    width: 100%;
+    margin-top: 0;
+    font-size: .875em;
+    color: #dc354500;
+}
+
+@media (max-width: 580px) {
+    /* .listaPrecios {
+        padding-left: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    } */
+    .listaPrecios li {
+        width: 33.33%;
+        background: #FDFAFF;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        padding: 20px 20px;
+        border-radius: 150px;
+        text-align: center;
+        margin: 10px 10px;
+        align-items: center;
+        vertical-align: middle;
+    }
+
+    .listaPrecios li > span {
+        color: #522D6D;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .listaPrecios li > p {
+        margin-bottom: 0px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #522D6D;
+    }
+    .none{
+        display: none;
+    }
+}
+
+@media (max-width: 479px) {
+    .none{
+        display: block;
+    }
+}
+
+@media (max-width: 390px) {
+    /* .listaPrecios {
+        padding-left: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    } */
+
+    .listaPrecios li {
+        width: 33.33%;
+        background: #FDFAFF;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        border-radius: 150px;
+        text-align: center;
+        margin: 10px 10px;
+        align-items: center;
+        vertical-align: middle;
+    }
+}
+
+#checkError{
+    color: #d10000;
+}
+
+.centerTble  tr td{
+    text-align: center !important;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+.notasInfo{
+    margin: 15px 0px;
+}
+
+.notasInfo small{
+    font-style: italic;
+    display: block;
+    font-weight: 500;
+}
+
+.campInt{
+    background: #F2F2F2;
+    
+}
+
+
+.campInt input{
+    border: none;
+    background: transparent;
+    position: relative;
+}
+
+.campInt > input::before{
+    content: "$";
+}
+
+.tableDos{
+    table-layout:auto;
+}
+
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.form-check{
+    margin: 20px 0px;
+}
+
+.montoErr, .montoErr2, .montoErr3, .montoErr4, .montoErr5, .montoErr6, .montoErr7, .montoErr8{
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 0px;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.form-control:disabled{
+    background: #f2f2f2 !important;
+}
+
+
+.alfaNumber{
+    text-transform: uppercase;
+}
+
+.pld > .form-check{
+    display: flex;
+}
+
+.pld > .form-check > label{
+    width: 95%;
+}
+
+.pld > .form-check > input{
+    float: right !important;
+    margin-left: 20px !important;
+}
+
+.pld > .form-check .form-check-input {
+    margin-left: 0;
+}
+
+
+.pldflex{
+    display: flex;
+}
+
+.pldflex > .form-floating{
+    width: 95%;
+}
+
+.pldflex > span{
+    width: 5%;
+    background: #fff !important;
+}
+
+.noInput{
+    background: #f2f2f2;
+    border: none;
 }
